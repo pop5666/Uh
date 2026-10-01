@@ -1,0 +1,40 @@
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+html,body{margin:0;height:100%;overflow:hidden;background:#06243a;font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;color:#fff;touch-action:none;overscroll-behavior:none}
+canvas{position:fixed;inset:0;display:block;touch-action:none}
+.hide{display:none!important}
+button{font:inherit;font-weight:800;color:#fff;border:0;border-bottom:4px solid rgba(0,0,0,.3);border-radius:16px;min-height:56px;min-width:230px;padding:0 22px;font-size:19px;background:linear-gradient(#27c4e8,#1478c8);cursor:pointer}
+button:active{transform:translateY(2px);filter:brightness(1.15)}
+button:disabled{filter:grayscale(.8) brightness(.8)}
+button.big{min-height:68px;font-size:26px;background:linear-gradient(#ffd43b,#ff922b);color:#5a2a00}
+.scr{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px;background:rgba(3,22,48,.6);overflow-y:auto;touch-action:pan-y}
+h1{margin:0;font-size:78px;line-height:.9;text-align:center;letter-spacing:3px;color:#ffd43b;text-shadow:0 5px 0 #c2410c,0 10px 20px rgba(0,0,0,.4)}
+h2{margin:4px 0;font-size:34px;text-shadow:0 3px 0 rgba(0,0,0,.4)}
+p{margin:0 0 8px;opacity:.85;letter-spacing:3px}
+.cn{font-weight:800;font-size:18px}
+.list{width:min(440px,100%);display:flex;flex-direction:column;gap:8px}
+.row2{display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(0,40,80,.7);border:2px solid rgba(120,220,255,.35);border-radius:14px;padding:10px 12px;font-weight:700}
+.row2 small{display:block;font-weight:400;opacity:.75;font-size:13px}
+.row2 em{font-style:normal;letter-spacing:2px;font-size:13px;color:#ffd43b}
+.row2 button{min-width:96px;min-height:48px;font-size:16px}
+.row2.on{border-color:#ffd43b}.row2.lock{opacity:.55}
+.pb{height:8px;border-radius:5px;background:rgba(255,255,255,.2);margin-top:6px;overflow:hidden}.pb i{display:block;height:100%;background:#4ade80}
+.panel{background:rgba(0,40,80,.75);border:3px solid #ffd43b;border-radius:18px;padding:16px 22px;font-size:20px;display:flex;flex-direction:column;gap:8px;min-width:270px}
+.panel b{color:#ffd43b;float:right;margin-left:16px}.panel em{color:#ff6b6b;font-style:normal;font-size:14px}
+#hud{position:fixed;left:0;right:0;top:0;padding:calc(env(safe-area-inset-top,0px) + 8px) 12px 0;pointer-events:none;display:flex;flex-direction:column;gap:5px}
+#hud .row{display:flex;gap:8px;align-items:center}
+.bar{position:relative;flex:1;height:22px;border-radius:12px;background:rgba(0,0,0,.45);overflow:hidden;border:2px solid rgba(255,255,255,.4)}
+.bar i{position:absolute;inset:0 auto 0 0;width:100%;transition:width .12s}
+.bar b{position:absolute;inset:0;text-align:center;font-size:13px;line-height:18px;text-shadow:0 1px 2px #000}
+.hp i{background:linear-gradient(#ff7b7b,#e03131)}.en i{background:linear-gradient(#ffe066,#f59f00)}
+.en{height:16px}.en b{line-height:12px;font-size:11px}
+.ic{pointer-events:auto;min-width:48px;min-height:48px;padding:0;font-size:22px}
+.stats{justify-content:space-between;font-weight:800;font-size:19px;text-shadow:0 2px 3px #000}
+#co{display:inline-block}
+.xp{height:6px;border-radius:4px;background:rgba(0,0,0,.4);overflow:hidden}.xp i{display:block;height:100%;width:0;background:#4ade80}
+#zn{font-size:12px;opacity:.8;text-align:center;letter-spacing:2px;text-transform:uppercase}
+#fx{font-weight:800;font-size:15px;text-align:center;text-shadow:0 2px 3px #000}
+#boost{position:fixed;right:calc(env(safe-area-inset-right,0px) + 18px);bottom:calc(env(safe-area-inset-bottom,0px) + 28px);width:92px;height:92px;min-width:0;min-height:0;padding:0;border-radius:50%;font-size:40px;background:radial-gradient(#ffe066,#f08c00);opacity:.9;touch-action:none}
+#banner{position:fixed;left:0;right:0;top:30%;text-align:center;font-size:34px;font-weight:900;color:#ffd43b;text-shadow:0 4px 0 #c2410c,0 0 20px rgba(0,0,0,.5);pointer-events:none;opacity:0;line-height:1.15;padding:0 12px}
+#banner.show{animation:bn 2.2s ease-out}
+@keyframes bn{0%{opacity:0;transform:scale(.4)}12%{opacity:1;transform:scale(1.15)}22%{transform:scale(1)}80%{opacity:1}100%{opacity:0;transform:translateY(-30px)}}
+@media (max-height:620px){h1{font-size:54px}button.big{min-height:56px}.scr{gap:8px}}
