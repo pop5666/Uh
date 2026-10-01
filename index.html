@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>DEEP FIN — Arcade Shark</title>
+<meta name="theme-color" content="#06243a">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="hud" class="hide">
+  <div class="row"><div class="bar hp"><i id="hpF"></i><b id="hpT"></b></div><button id="pause" class="ic">⏸</button></div>
+  <div class="bar en"><i id="enF"></i><b id="enT"></b></div>
+  <div class="row stats"><span>⭐ <b id="sc">0</b></span><span id="lv"></span><span id="co">🪙 <b id="cn">0</b></span></div>
+  <div class="xp"><i id="xpF"></i></div>
+  <div id="zn"></div>
+  <div id="fx"></div>
+</div>
+<button id="boost" class="hide">⚡</button>
+<div id="banner"></div>
+
+<section id="menu" class="scr">
+  <h1>DEEP<br>FIN</h1><p>Eat • Grow • Dive</p>
+  <button class="big" data-go="play">▶ PLAY</button>
+  <button data-go="shark">🦈 SHARK</button>
+  <button data-go="upg">⬆ UPGRADE</button>
+  <button data-go="mis">🎯 MISSIONS</button>
+  <div class="cn">🪙 <span class="coins"></span> &nbsp; ⭐ Best <span id="bestM"></span></div>
+</section>
+
+<section id="shark" class="scr hide"><h2>🦈 SHARK</h2><div id="sharkList" class="list"></div><button data-go="menu">⬅ BACK</button></section>
+<section id="upg" class="scr hide"><h2>⬆ UPGRADE</h2><div class="cn">🪙 <span class="coins"></span></div><div id="upList" class="list"></div><button data-go="menu">⬅ BACK</button></section>
+<section id="mis" class="scr hide"><h2>🎯 MISSIONS</h2><div id="misList" class="list"></div><button data-go="menu">⬅ BACK</button></section>
+
+<section id="over" class="scr hide">
+  <h2>GAME OVER</h2>
+  <div class="panel">
+    <div>⭐ SCORE <b id="oScore"></b></div>
+    <div>🏆 BEST <b id="oBest"></b> <em id="oNew"></em></div>
+    <div>🪙 COINS EARNED <b id="oCoins"></b></div>
+  </div>
+  <button class="big" data-go="play">↻ PLAY AGAIN</button>
+  <button data-go="menu">🏠 HOME</button>
+</section>
+
+<script src="js/game.js"></script>
+<script>if("serviceWorker"in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}))</script>
+</body>
+</html>
